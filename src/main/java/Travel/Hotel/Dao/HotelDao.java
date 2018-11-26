@@ -19,7 +19,7 @@ public class HotelDao {
 	protected EntityManager em;
 	
 	public List<Hotel> findAll() {
-		return em.createQuery(" FROM Hotel", Hotel.class).getResultList();
+		return em.createQuery("FROM Hotel", Hotel.class).getResultList();
 	}
 
 	

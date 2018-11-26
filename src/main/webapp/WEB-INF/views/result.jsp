@@ -9,6 +9,9 @@
 <body>
 <h1>Hotel Results</h1>
 
+
+${hotels }
+
 <p>Insert Text</p>
 </body>
 </html>

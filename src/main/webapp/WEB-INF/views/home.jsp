@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,26 +9,22 @@
 <title>Home</title>
 </head>
 <body>
-<h1>Home</h1>
+	<h1>Home</h1>
 
-<p>Hotel Search</p>
-<form action ="/result">
+	<p>Hotel Search</p>
+	<form action="/result">
 
-<select path="Hotels" items="${hotel}"/>
+		<select name="hotels">
+			<c:forEach var="hotels" items="${hotellist}">
 
-    <option items=${hotel }>Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-    
-  </select>
-  <br><br>
-  
-  
-  <input type="submit">
+				<option>${hotels.name }</option>
 
 
-</form>
+			</c:forEach>
+		</select> <input type="submit">
+
+
+	</form>
 
 
 
